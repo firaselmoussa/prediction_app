@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="app_container" id="app_container">
+    
+        <h1>Doge Prediction</h1>
+        <p>Enter Yor Name & Doge will try to predict your Age, Gender & Nationality(s).</p>
+
+        <!-- surrounded input and button with a div to render them next to each other in 1 row. -->
+        <div>
+            <input type="text" name="name" id="name_input" placeholder="First Name" class="name-input" required>
+    
+            <button id="predict_btn" class="predict-btn">Predict</button>
+        </div>
+
+        <!-- Prediction will be rendered below -->
+        <div class="result">
+            <p id="gender"></p>
+            <p id="age"></p>
+            <p id="nationalities"></p>
+        </div>
+
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
