@@ -1,0 +1,11 @@
+/* RESET */
+body{
+    padding: 0;
+    margin: 0;
+    backdrop-filter: brightness(.3) blur(4px);
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
