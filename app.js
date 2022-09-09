@@ -48,29 +48,14 @@ predict_btn.addEventListener('click', ()=>{
             age.innerText = `Age: ${data.age}` 
     )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// fetching possible nationality(s) of given input
+    fetch(`https://api.nationalize.io/?name=${name_input.value}`).then(
+    res => 
+        res.json()).then(
+            data => 
+            nationalities.innerText = `Nationality(s): ${data.country[0].country_id} , ${data.country[1].country_id}`
+            // Charbel said only 2 nationalities, otherwise i would've used foreach to loop throughout the whole array.
+    )
 
 
     }
