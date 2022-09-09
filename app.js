@@ -12,10 +12,25 @@ fetch('https://dog.ceo/api/breeds/image/random').then(
     res => 
         res.json()).then(
             data => 
-            // couldnt add low backdrop filter to the body to lower it's brightness & and blur the main section at the same time so I added a gradient over thebg image
+            // could'nt add low backdrop filter to the body to lower it's brightness & and blur the main section at the same time so I added a gradient over thebg image
                 document.body.style.background = ` linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .6)), 
                 url(${data.message} )`
     )
+
+let popup = document.createElement('div');
+popup.classList.add('popup');
+document.body.append(popup);
+let popup_text = document.createElement('h1');
+popup_text.innerText = "Here's your daily dose of cuteness."
+popup.append(popup_text);
+let popup_img = document.createElement('img');
+fetch('https://dog.ceo/api/breeds/image/random').then(
+    res => 
+    res.json()).then(
+    data => 
+    popup_img.src = data.message)
+popup_img.classList.add('popup-img');
+popup.append(popup_img);
 
 
 // ///////////////////////////////////////////////////////////////
