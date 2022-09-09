@@ -12,5 +12,7 @@ fetch('https://dog.ceo/api/breeds/image/random').then(
     res => 
         res.json()).then(
             data => 
-                document.body.style.background = `url(${data.message} )`
+            // couldnt add low backdrop filter to the body to lower it's brightness & and blur the main section at the same time so I added a gradient over thebg image
+                document.body.style.background = ` linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .6)), 
+                url(${data.message} )`
     )
