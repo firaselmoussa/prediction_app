@@ -16,3 +16,47 @@ fetch('https://dog.ceo/api/breeds/image/random').then(
                 document.body.style.background = ` linear-gradient(rgba(0,0,0, .6), rgba(0,0,0, .6)), 
                 url(${data.message} )`
     )
+
+
+// ///////////////////////////////////////////////////////////////
+    
+let name_input = document.getElementById('name_input');
+let predict_btn = document.getElementById('predict_btn');
+let gender = document.getElementById('gender');
+let age = document.getElementById('age');
+let nationalities = document.getElementById('nationalities')
+
+predict_btn.addEventListener('click', ()=>{
+    if(!name_input.value){
+        name_input.classList.add('emtpy-input');
+    } else{
+        name_input.classList.remove('emtpy-input');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+})
