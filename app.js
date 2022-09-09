@@ -17,19 +17,46 @@ fetch('https://dog.ceo/api/breeds/image/random').then(
                 url(${data.message} )`
     )
 
+// Creating popup and appending it 
+let app_container = document.getElementById('app_container');
+
+
 let popup = document.createElement('div');
 popup.classList.add('popup');
 document.body.append(popup);
+
+let top_border = document.createElement('hr');
+top_border.classList.add('top-border');
+popup.append(top_border);
+
 let popup_text = document.createElement('h1');
 popup_text.innerText = "Here's your daily dose of cuteness."
 popup.append(popup_text);
+
 let popup_img = document.createElement('img');
 fetch('https://dog.ceo/api/breeds/image/random').then(
     res => 
     res.json()).then(
     data => 
-    popup_img.src = data.message)
+    popup_img.src = data.message);
 popup_img.classList.add('popup-img');
+
+let count_down = 100;
+
+setInterval(()=>{
+    if(count_down > -1){
+        top_border.style.width = `${count_down}%`; 
+        count_down -= .1;
+    }else{
+        clearInterval
+        // document.body.remove(popup);
+        popup.style.display = 'none';
+        app_container.style.display = 'flex';
+
+    }
+    
+}, 10)
+
 popup.append(popup_img);
 
 
