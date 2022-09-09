@@ -44,13 +44,12 @@ popup_img.classList.add('popup-img');
 popup.append(popup_img);
 
 
-setInterval(()=>{
+let timer = setInterval(()=>{
     if(count_down > -1){
         top_border.style.width = `${count_down}%`; 
         count_down -= .1;
     }else{
-        clearInterval
-        // document.body.remove(popup);
+        clearInterval(timer);
         popup.style.display = 'none';
         app_container.style.display = 'flex';
     }
@@ -64,8 +63,14 @@ let predict_btn = document.getElementById('predict_btn');
 let gender = document.getElementById('gender');
 let age = document.getElementById('age');
 let nationalities = document.getElementById('nationalities');
+let know_more = document.createElement('a');
+know_more.innerText = 'Know more';
+know_more.style.color = 'white';
+
 
 predict_btn.addEventListener('click', ()=>{
+    
+    // checking user's input validity
     if(!name_input.value){
         name_input.classList.add('emtpy-input');
     } else{
@@ -95,5 +100,10 @@ predict_btn.addEventListener('click', ()=>{
             nationalities.innerText = `Nationality(s): ${data.country[0].country_id} , ${data.country[1].country_id}`
             // Charbel said only 2 nationalities, otherwise i would've used foreach to loop throughout the whole array.
         );
+
+        // Customizing wikipedia's url to fit user's input
+        know_more.href = `https://en.wikipedia.org/wiki/${name_input.value}`;
+        document.querySelector('.result').append(know_more);
     };
 });
+
