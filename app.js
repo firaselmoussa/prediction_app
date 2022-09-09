@@ -32,6 +32,13 @@ predict_btn.addEventListener('click', ()=>{
     } else{
         name_input.classList.remove('emtpy-input');
 
+// fetching possible gender of given input
+    fetch(`https://api.genderize.io?name=${name_input.value}`).then(
+    res => 
+        res.json()).then(
+            data => 
+            gender.innerText = `Gender: ${data.gender}` 
+    )
 
 
 
