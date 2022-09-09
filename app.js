@@ -19,7 +19,7 @@ fetch('https://dog.ceo/api/breeds/image/random').then(
 
 
 // ///////////////////////////////////////////////////////////////
-    
+
 let name_input = document.getElementById('name_input');
 let predict_btn = document.getElementById('predict_btn');
 let gender = document.getElementById('gender');
@@ -58,5 +58,5 @@ predict_btn.addEventListener('click', ()=>{
     )
 
 
-    }
+}
 })

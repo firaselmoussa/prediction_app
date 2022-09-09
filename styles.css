@@ -1,8 +1,7 @@
-/* RESET */
+
 body{
     padding: 0;
     margin: 0;
-    /* backdrop-filter: brightness(.5) blur(2px); */
     display: flex;
     flex-wrap: wrap ;
     justify-content: center;
@@ -32,6 +31,8 @@ body{
     border-radius: 5px;
     padding: 10px 15px;
 }
+
+/* class to be given when input field is left empty */
 .emtpy-input{
     border: 1px solid red;
 }
@@ -68,6 +69,7 @@ body{
     margin: 10px;
 }
 
+/* Resizing app container according to screen size */
 @media only screen and (max-width: 1000px) {
     .app_container {
         width: 65vw;
