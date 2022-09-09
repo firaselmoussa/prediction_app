@@ -40,6 +40,14 @@ predict_btn.addEventListener('click', ()=>{
             gender.innerText = `Gender: ${data.gender}` 
     )
 
+// fetching possible age of given input
+    fetch(`https://api.agify.io/?name=${name_input.value}`).then(
+    res => 
+        res.json()).then(
+            data => 
+            age.innerText = `Age: ${data.age}` 
+    )
+
 
 
 
