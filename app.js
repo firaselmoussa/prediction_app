@@ -110,12 +110,30 @@ predict_btn.addEventListener('click', ()=>{
 // ///////////////////////////////////////////
 let ipAddress = document.createElement('h4');
 ipAddress.classList.add('ip-address');
-app_container.append(ipAddress)
-
+app_container.append(ipAddress);
 
     axios.get('https://api.ipify.org/?format=json').then((res)=>{
         ipAddress.innerText = res.data.ip
         
-    })
+    });
+
+    // ACIVITY
+
+
+let bored_btn = document.createElement('button');
+bored_btn.innerText = 'Bored?'
+bored_btn .classList.add('bored_btn');
+app_container.append(bored_btn);
+
+let activity_popup = document.createElement('h5');
+
+bored_btn.addEventListener('click',()=>{
+
+axios.get('https://www.boredapi.com/api/activity').then((res)=>{
+        activity_popup.innerText = res.data.activity;
+        app_container.append(activity_popup);
+    })    
+});
+    
     
 
