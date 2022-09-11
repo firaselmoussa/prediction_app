@@ -117,8 +117,8 @@ app_container.append(ipAddress);
         
     });
 
+    
     // ACIVITY
-
 
 let bored_btn = document.createElement('button');
 bored_btn.innerText = 'Bored?'
@@ -131,6 +131,23 @@ bored_btn.addEventListener('click',()=>{
 
 axios.get('https://www.boredapi.com/api/activity').then((res)=>{
         activity_popup.innerText = res.data.activity;
+        app_container.append(activity_popup);
+    })    
+});
+
+
+let sad_btn = document.createElement('button');
+sad_btn.innerText = 'sad?'
+sad_btn .classList.add('sad_btn');
+app_container.append(sad_btn);
+
+
+
+sad_btn.addEventListener('click',()=>{
+
+axios.get('https://official-joke-api.wl.r.appspot.com/jokes/random').then((res)=>{
+        activity_popup.innerHTML = `${res.data.setup} <br> ${res.data.punchline}`;
+        console.log(res)
         app_container.append(activity_popup);
     })    
 });
