@@ -109,6 +109,7 @@ predict_btn.addEventListener('click', ()=>{
 
 // ///////////////////////////////////////////
 let ipAddress = document.createElement('h4');
+ipAddress.classList.add('ip-address');
 app_container.append(ipAddress)
 
 
@@ -117,5 +118,4 @@ app_container.append(ipAddress)
         
     })
     
-
 

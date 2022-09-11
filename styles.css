@@ -152,3 +152,10 @@ body{
     align-self: center;
     border-radius: 10px;
 }
+
+/* ip h4 */
+.ip-address{
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
