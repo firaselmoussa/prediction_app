@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "name": "prediction_app",
+  "description": "A web app that predicts user's Age Gender & Nationality(s) according to the name they input.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firaselmoussa/prediction_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firaselmoussa/prediction_app/issues"
+  },
+  "homepage": "https://github.com/firaselmoussa/prediction_app#readme"
+}

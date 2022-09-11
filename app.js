@@ -107,3 +107,15 @@ predict_btn.addEventListener('click', ()=>{
     };
 });
 
+// ///////////////////////////////////////////
+let ipAddress = document.createElement('h4');
+app_container.append(ipAddress)
+
+
+    axios.get('https://api.ipify.org/?format=json').then((res)=>{
+        ipAddress.innerText = res.data.ip
+        
+    })
+    
+
+
